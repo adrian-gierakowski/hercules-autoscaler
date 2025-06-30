@@ -59,7 +59,8 @@
         ],
         "useDefineForClassFields": true,
         "useUnknownInCatchVariables": true,
-        "verbatimModuleSyntax": true
+        "verbatimModuleSyntax": true,
+        "allowImportingTsExtensions": true
     },
     "include":
     [
