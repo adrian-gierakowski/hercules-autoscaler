@@ -1,2 +1,19 @@
 .direnv
 .yarn
+
+# yarn
+.pnp.*
+**/.yarn/**
+!.yarn/patches
+!.yarn/patches/**
+!.yarn/sdks
+!.yarn/sdks/**
+!.yarn/versions
+!.yarn/versions/**
+
+yarn-error.log
+
+# typescript output
+dist
+# tsc build cashing info
+*.tsbuildinfo

@@ -1,5 +1,10 @@
 {
   "name": "hercules-autoscaler",
   "packageManager": "yarn@4.9.1",
-  "bin": "src/index.js"
+  "bin": "src/index.js",
+  "devDependencies": {
+    "tslib": "2.8.1",
+    "tsx": "4.20.3",
+    "typescript": "5.8.3"
+  }
 }
