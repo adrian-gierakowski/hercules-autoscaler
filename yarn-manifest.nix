@@ -3,6 +3,122 @@
 # Manual changes WILL be lost - proceed with caution!
 let
   packages = {
+    "@effect/platform-node-shared@npm:0.42.3" = {
+      name = "@effect/platform-node-shared";
+      reference = "npm:0.42.3";
+      linkType = "HARD";
+      outputName = "effect-platform-node-shared-0.42.3-a0bc62f69a";
+      outputHash = "bab7e85218b3b8e3d8a9e7ba8adcd293b714e39518a3907e07f608ffac31bf0c61b38715f98b49cbf5a91a6e7de698e477f9393a955080d1c3ba1616d767701d";
+      flatName = "platform-node-shared";
+      languageName = "node";
+      scope = "effect";
+      descriptorRange = "npm:^0.42.3";
+      checksum = "10c0/bab7e85218b3b8e3d8a9e7ba8adcd293b714e39518a3907e07f608ffac31bf0c61b38715f98b49cbf5a91a6e7de698e477f9393a955080d1c3ba1616d767701d";
+      dependencies = {
+        "@parcel/watcher" = packages."@parcel/watcher@npm:2.5.1";
+        "multipasta" = packages."multipasta@npm:0.2.5";
+        "ws" = packages."ws@npm:8.18.3";
+      };
+      packagePeers = [
+        "@effect/cluster"
+        "@effect/platform"
+        "@effect/rpc"
+        "@effect/sql"
+        "@types/effect"
+        "@types/effect__cluster"
+        "@types/effect__platform"
+        "@types/effect__rpc"
+        "@types/effect__sql"
+        "effect"
+      ];
+    };
+    "@effect/platform-node-shared@virtual:85d9fc7390c2387fc90f37043b6e9563f4d165db63de6d3677005ae240534b8f57036762614c3306e5ff09aeaab8bcafec7a88bb4f25d593e4eb9366cf6789f2#npm:0.42.3" = {
+      name = "@effect/platform-node-shared";
+      reference = "virtual:85d9fc7390c2387fc90f37043b6e9563f4d165db63de6d3677005ae240534b8f57036762614c3306e5ff09aeaab8bcafec7a88bb4f25d593e4eb9366cf6789f2#npm:0.42.3";
+      canonicalPackage = packages."@effect/platform-node-shared@npm:0.42.3";
+      dependencies = {
+        "@effect/platform" = packages."@effect/platform@virtual:9fdf1c0276a5063a0246208473136940d2d3e1cf0b872c8342473e9009a9e0ed662593c069f01f56610c6b2c2b0d36482a42d2b93dc5c5ded6d0afff13e612db#npm:0.87.1";
+        "@parcel/watcher" = packages."@parcel/watcher@npm:2.5.1";
+        "effect" = packages."effect@npm:3.16.10";
+        "multipasta" = packages."multipasta@npm:0.2.5";
+        "ws" = packages."ws@virtual:85d9fc7390c2387fc90f37043b6e9563f4d165db63de6d3677005ae240534b8f57036762614c3306e5ff09aeaab8bcafec7a88bb4f25d593e4eb9366cf6789f2#npm:8.18.3";
+      };
+    };
+    "@effect/platform-node@npm:0.88.3" = {
+      name = "@effect/platform-node";
+      reference = "npm:0.88.3";
+      linkType = "HARD";
+      outputName = "effect-platform-node-0.88.3-00e9974dca";
+      outputHash = "610f13e15e011c4a4fd119a3ce72216526cd52b35014dffa5caacde0d32cfcb3173c895a05df22562c504f945f87eaf6a3b1f6fd43fe03ed3ff287b8dc9681d5";
+      flatName = "platform-node";
+      languageName = "node";
+      scope = "effect";
+      descriptorRange = "npm:0.88.3";
+      checksum = "10c0/610f13e15e011c4a4fd119a3ce72216526cd52b35014dffa5caacde0d32cfcb3173c895a05df22562c504f945f87eaf6a3b1f6fd43fe03ed3ff287b8dc9681d5";
+      dependencies = {
+        "@effect/platform-node-shared" = packages."@effect/platform-node-shared@npm:0.42.3";
+        "mime" = packages."mime@npm:3.0.0";
+        "undici" = packages."undici@npm:7.11.0";
+        "ws" = packages."ws@npm:8.18.3";
+      };
+      packagePeers = [
+        "@effect/cluster"
+        "@effect/platform"
+        "@effect/rpc"
+        "@effect/sql"
+        "@types/effect"
+        "@types/effect__cluster"
+        "@types/effect__platform"
+        "@types/effect__rpc"
+        "@types/effect__sql"
+        "effect"
+      ];
+    };
+    "@effect/platform-node@virtual:9fdf1c0276a5063a0246208473136940d2d3e1cf0b872c8342473e9009a9e0ed662593c069f01f56610c6b2c2b0d36482a42d2b93dc5c5ded6d0afff13e612db#npm:0.88.3" = {
+      name = "@effect/platform-node";
+      reference = "virtual:9fdf1c0276a5063a0246208473136940d2d3e1cf0b872c8342473e9009a9e0ed662593c069f01f56610c6b2c2b0d36482a42d2b93dc5c5ded6d0afff13e612db#npm:0.88.3";
+      canonicalPackage = packages."@effect/platform-node@npm:0.88.3";
+      dependencies = {
+        "@effect/platform" = packages."@effect/platform@virtual:9fdf1c0276a5063a0246208473136940d2d3e1cf0b872c8342473e9009a9e0ed662593c069f01f56610c6b2c2b0d36482a42d2b93dc5c5ded6d0afff13e612db#npm:0.87.1";
+        "@effect/platform-node-shared" = packages."@effect/platform-node-shared@virtual:85d9fc7390c2387fc90f37043b6e9563f4d165db63de6d3677005ae240534b8f57036762614c3306e5ff09aeaab8bcafec7a88bb4f25d593e4eb9366cf6789f2#npm:0.42.3";
+        "effect" = packages."effect@npm:3.16.10";
+        "mime" = packages."mime@npm:3.0.0";
+        "undici" = packages."undici@npm:7.11.0";
+        "ws" = packages."ws@virtual:85d9fc7390c2387fc90f37043b6e9563f4d165db63de6d3677005ae240534b8f57036762614c3306e5ff09aeaab8bcafec7a88bb4f25d593e4eb9366cf6789f2#npm:8.18.3";
+      };
+    };
+    "@effect/platform@npm:0.87.1" = {
+      name = "@effect/platform";
+      reference = "npm:0.87.1";
+      linkType = "HARD";
+      outputName = "effect-platform-0.87.1-26f413398a";
+      outputHash = "59f19eaabab4bfe815ef929073dd85902887e446047b39dbbbbca1d08150db105de821ad1546907c256106eed1bdd6a283c3c4c8d0a7b34e7f624e96acbf47a8";
+      flatName = "platform";
+      languageName = "node";
+      scope = "effect";
+      descriptorRange = "npm:0.87.1";
+      checksum = "10c0/59f19eaabab4bfe815ef929073dd85902887e446047b39dbbbbca1d08150db105de821ad1546907c256106eed1bdd6a283c3c4c8d0a7b34e7f624e96acbf47a8";
+      dependencies = {
+        "find-my-way-ts" = packages."find-my-way-ts@npm:0.1.5";
+        "msgpackr" = packages."msgpackr@npm:1.11.4";
+        "multipasta" = packages."multipasta@npm:0.2.5";
+      };
+      packagePeers = [
+        "@types/effect"
+        "effect"
+      ];
+    };
+    "@effect/platform@virtual:9fdf1c0276a5063a0246208473136940d2d3e1cf0b872c8342473e9009a9e0ed662593c069f01f56610c6b2c2b0d36482a42d2b93dc5c5ded6d0afff13e612db#npm:0.87.1" = {
+      name = "@effect/platform";
+      reference = "virtual:9fdf1c0276a5063a0246208473136940d2d3e1cf0b872c8342473e9009a9e0ed662593c069f01f56610c6b2c2b0d36482a42d2b93dc5c5ded6d0afff13e612db#npm:0.87.1";
+      canonicalPackage = packages."@effect/platform@npm:0.87.1";
+      dependencies = {
+        "effect" = packages."effect@npm:3.16.10";
+        "find-my-way-ts" = packages."find-my-way-ts@npm:0.1.5";
+        "msgpackr" = packages."msgpackr@npm:1.11.4";
+        "multipasta" = packages."multipasta@npm:0.2.5";
+      };
+    };
     "@esbuild/aix-ppc64@npm:0.25.5" = {
       name = "@esbuild/aix-ppc64";
       reference = "npm:0.25.5";
@@ -363,6 +479,84 @@ let
         "minipass" = packages."minipass@npm:7.1.2";
       };
     };
+    "@msgpackr-extract/msgpackr-extract-darwin-arm64@npm:3.0.3" = {
+      name = "@msgpackr-extract/msgpackr-extract-darwin-arm64";
+      reference = "npm:3.0.3";
+      linkType = "HARD";
+      outputName = "msgpackr-extract-msgpackr-extract-darwin-arm64-3.0.3-23b9647943";
+      outputHash = "f8d48613de17e5356d273745042bbc7c0d345e1e4e5e88ed1132a3ed9ca65db9f8b908a708383d7a58ede276c105e7c9a2887fad00d5e47892010466e5312b47";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (stdenv.isDarwin) && (stdenv.isAarch64);
+      flatName = "msgpackr-extract-darwin-arm64";
+      languageName = "node";
+      scope = "msgpackr-extract";
+      descriptorRange = "npm:3.0.3";
+    };
+    "@msgpackr-extract/msgpackr-extract-darwin-x64@npm:3.0.3" = {
+      name = "@msgpackr-extract/msgpackr-extract-darwin-x64";
+      reference = "npm:3.0.3";
+      linkType = "HARD";
+      outputName = "msgpackr-extract-msgpackr-extract-darwin-x64-3.0.3-cf8ce1c077";
+      outputHash = "270f8831d7f6d61ff36e7118e09ec13baa633bb22dd57fa3a9e6af67f7036a3fd1beec4c8aad1c72639522300364cef98bc5ba2cddf67a3832f8a35b7fc45502";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (stdenv.isDarwin) && (stdenv.isx86_64);
+      flatName = "msgpackr-extract-darwin-x64";
+      languageName = "node";
+      scope = "msgpackr-extract";
+      descriptorRange = "npm:3.0.3";
+    };
+    "@msgpackr-extract/msgpackr-extract-linux-arm@npm:3.0.3" = {
+      name = "@msgpackr-extract/msgpackr-extract-linux-arm";
+      reference = "npm:3.0.3";
+      linkType = "HARD";
+      outputName = "msgpackr-extract-msgpackr-extract-linux-arm-3.0.3-e3c3cf3492";
+      outputHash = "";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (stdenv.isLinux) && (stdenv.isAarch32);
+      flatName = "msgpackr-extract-linux-arm";
+      languageName = "node";
+      scope = "msgpackr-extract";
+      descriptorRange = "npm:3.0.3";
+    };
+    "@msgpackr-extract/msgpackr-extract-linux-arm64@npm:3.0.3" = {
+      name = "@msgpackr-extract/msgpackr-extract-linux-arm64";
+      reference = "npm:3.0.3";
+      linkType = "HARD";
+      outputName = "msgpackr-extract-msgpackr-extract-linux-arm64-3.0.3-9da3d01c14";
+      outputHash = "326c19865ead39017326dd8066cde30adaf87a62b968a22d5e5369691817086f681fc291be80b7c61c5496fe915f6df546f41e14ee18b896c54de5099cf147ac";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (stdenv.isLinux) && (stdenv.isAarch64);
+      flatName = "msgpackr-extract-linux-arm64";
+      languageName = "node";
+      scope = "msgpackr-extract";
+      descriptorRange = "npm:3.0.3";
+    };
+    "@msgpackr-extract/msgpackr-extract-linux-x64@npm:3.0.3" = {
+      name = "@msgpackr-extract/msgpackr-extract-linux-x64";
+      reference = "npm:3.0.3";
+      linkType = "HARD";
+      outputName = "msgpackr-extract-msgpackr-extract-linux-x64-3.0.3-76216d0983";
+      outputHash = "ab74755aa2afd27ad8f5277c7cb7a0c721028ba63c3e3109458689340d76ed4c901aa2c71ae5950f3a2149ae9e835e711a12842db219864107cc0c5c1fbdc0da";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (stdenv.isLinux) && (stdenv.isx86_64);
+      flatName = "msgpackr-extract-linux-x64";
+      languageName = "node";
+      scope = "msgpackr-extract";
+      descriptorRange = "npm:3.0.3";
+    };
+    "@msgpackr-extract/msgpackr-extract-win32-x64@npm:3.0.3" = {
+      name = "@msgpackr-extract/msgpackr-extract-win32-x64";
+      reference = "npm:3.0.3";
+      linkType = "HARD";
+      outputName = "msgpackr-extract-msgpackr-extract-win32-x64-3.0.3-7a8ff8fc6d";
+      outputHash = "";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (false) && (stdenv.isx86_64);
+      flatName = "msgpackr-extract-win32-x64";
+      languageName = "node";
+      scope = "msgpackr-extract";
+      descriptorRange = "npm:3.0.3";
+    };
     "@npmcli/agent@npm:3.0.0" = {
       name = "@npmcli/agent";
       reference = "npm:3.0.0";
@@ -397,6 +591,208 @@ let
         "semver" = packages."semver@npm:7.7.2";
       };
     };
+    "@parcel/watcher-android-arm64@npm:2.5.1" = {
+      name = "@parcel/watcher-android-arm64";
+      reference = "npm:2.5.1";
+      linkType = "HARD";
+      outputName = "parcel-watcher-android-arm64-2.5.1-5eeecb6e21";
+      outputHash = "";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (false) && (stdenv.isAarch64);
+      flatName = "watcher-android-arm64";
+      languageName = "node";
+      scope = "parcel";
+      descriptorRange = "npm:2.5.1";
+    };
+    "@parcel/watcher-darwin-arm64@npm:2.5.1" = {
+      name = "@parcel/watcher-darwin-arm64";
+      reference = "npm:2.5.1";
+      linkType = "HARD";
+      outputName = "parcel-watcher-darwin-arm64-2.5.1-12be747bca";
+      outputHash = "973c7ef3c94608da9cd1b20b18b9a7de2fb46fe44553731fe372b640de524491976150d0845f3d5953b74ed8ea469cb8d18a48651d0e5fb82f549a6b46b54f79";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (stdenv.isDarwin) && (stdenv.isAarch64);
+      flatName = "watcher-darwin-arm64";
+      languageName = "node";
+      scope = "parcel";
+      descriptorRange = "npm:2.5.1";
+    };
+    "@parcel/watcher-darwin-x64@npm:2.5.1" = {
+      name = "@parcel/watcher-darwin-x64";
+      reference = "npm:2.5.1";
+      linkType = "HARD";
+      outputName = "parcel-watcher-darwin-x64-2.5.1-7a8bd09237";
+      outputHash = "848c5516aed9c36e14751200dbbf57e83c0bd46cdab0932df33db120e66b9596de18eeb98980e319efde84014f67d9e7924d7555383d8ffcefe35c501166b84b";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (stdenv.isDarwin) && (stdenv.isx86_64);
+      flatName = "watcher-darwin-x64";
+      languageName = "node";
+      scope = "parcel";
+      descriptorRange = "npm:2.5.1";
+    };
+    "@parcel/watcher-freebsd-x64@npm:2.5.1" = {
+      name = "@parcel/watcher-freebsd-x64";
+      reference = "npm:2.5.1";
+      linkType = "HARD";
+      outputName = "parcel-watcher-freebsd-x64-2.5.1-8d68995fbd";
+      outputHash = "";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (false) && (stdenv.isx86_64);
+      flatName = "watcher-freebsd-x64";
+      languageName = "node";
+      scope = "parcel";
+      descriptorRange = "npm:2.5.1";
+    };
+    "@parcel/watcher-linux-arm-glibc@npm:2.5.1" = {
+      name = "@parcel/watcher-linux-arm-glibc";
+      reference = "npm:2.5.1";
+      linkType = "HARD";
+      outputName = "parcel-watcher-linux-arm-glibc-2.5.1-dbba115920";
+      outputHash = "";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (stdenv.isLinux) && (stdenv.isAarch32);
+      flatName = "watcher-linux-arm-glibc";
+      languageName = "node";
+      scope = "parcel";
+      descriptorRange = "npm:2.5.1";
+    };
+    "@parcel/watcher-linux-arm-musl@npm:2.5.1" = {
+      name = "@parcel/watcher-linux-arm-musl";
+      reference = "npm:2.5.1";
+      linkType = "HARD";
+      outputName = "parcel-watcher-linux-arm-musl-2.5.1-4c02382019";
+      outputHash = "";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (stdenv.isLinux) && (stdenv.isAarch32) && (false);
+      flatName = "watcher-linux-arm-musl";
+      languageName = "node";
+      scope = "parcel";
+      descriptorRange = "npm:2.5.1";
+    };
+    "@parcel/watcher-linux-arm64-glibc@npm:2.5.1" = {
+      name = "@parcel/watcher-linux-arm64-glibc";
+      reference = "npm:2.5.1";
+      linkType = "HARD";
+      outputName = "parcel-watcher-linux-arm64-glibc-2.5.1-fcde7c8778";
+      outputHash = "562231feb159a294752378bebecc69a2d33366a9d877835844578799f8536398006e0e570849f9e2db04085a3ea82131459cd10fd6b42dea10cd73bd0c9ca13e";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (stdenv.isLinux) && (stdenv.isAarch64);
+      flatName = "watcher-linux-arm64-glibc";
+      languageName = "node";
+      scope = "parcel";
+      descriptorRange = "npm:2.5.1";
+    };
+    "@parcel/watcher-linux-arm64-musl@npm:2.5.1" = {
+      name = "@parcel/watcher-linux-arm64-musl";
+      reference = "npm:2.5.1";
+      linkType = "HARD";
+      outputName = "parcel-watcher-linux-arm64-musl-2.5.1-130ca76a6e";
+      outputHash = "";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (stdenv.isLinux) && (stdenv.isAarch64) && (false);
+      flatName = "watcher-linux-arm64-musl";
+      languageName = "node";
+      scope = "parcel";
+      descriptorRange = "npm:2.5.1";
+    };
+    "@parcel/watcher-linux-x64-glibc@npm:2.5.1" = {
+      name = "@parcel/watcher-linux-x64-glibc";
+      reference = "npm:2.5.1";
+      linkType = "HARD";
+      outputName = "parcel-watcher-linux-x64-glibc-2.5.1-92a895ebe3";
+      outputHash = "425e557991fde5092d6a9e20be71810600415e5fa157dca0b39bd8db86653d3ee7b037305261c8782d1a065f2a64d235e17b57876b26f5bb0dd7a9bdbe364690";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (stdenv.isLinux) && (stdenv.isx86_64);
+      flatName = "watcher-linux-x64-glibc";
+      languageName = "node";
+      scope = "parcel";
+      descriptorRange = "npm:2.5.1";
+    };
+    "@parcel/watcher-linux-x64-musl@npm:2.5.1" = {
+      name = "@parcel/watcher-linux-x64-musl";
+      reference = "npm:2.5.1";
+      linkType = "HARD";
+      outputName = "parcel-watcher-linux-x64-musl-2.5.1-1f030ca64b";
+      outputHash = "";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (stdenv.isLinux) && (stdenv.isx86_64) && (false);
+      flatName = "watcher-linux-x64-musl";
+      languageName = "node";
+      scope = "parcel";
+      descriptorRange = "npm:2.5.1";
+    };
+    "@parcel/watcher-win32-arm64@npm:2.5.1" = {
+      name = "@parcel/watcher-win32-arm64";
+      reference = "npm:2.5.1";
+      linkType = "HARD";
+      outputName = "parcel-watcher-win32-arm64-2.5.1-2dfe3131ac";
+      outputHash = "";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (false) && (stdenv.isAarch64);
+      flatName = "watcher-win32-arm64";
+      languageName = "node";
+      scope = "parcel";
+      descriptorRange = "npm:2.5.1";
+    };
+    "@parcel/watcher-win32-ia32@npm:2.5.1" = {
+      name = "@parcel/watcher-win32-ia32";
+      reference = "npm:2.5.1";
+      linkType = "HARD";
+      outputName = "parcel-watcher-win32-ia32-2.5.1-e70c7b871b";
+      outputHash = "";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (false) && (stdenv.isi686);
+      flatName = "watcher-win32-ia32";
+      languageName = "node";
+      scope = "parcel";
+      descriptorRange = "npm:2.5.1";
+    };
+    "@parcel/watcher-win32-x64@npm:2.5.1" = {
+      name = "@parcel/watcher-win32-x64";
+      reference = "npm:2.5.1";
+      linkType = "HARD";
+      outputName = "parcel-watcher-win32-x64-2.5.1-6e3012ad80";
+      outputHash = "";
+      shouldBeUnplugged = true;
+      installCondition = stdenv: (false) && (stdenv.isx86_64);
+      flatName = "watcher-win32-x64";
+      languageName = "node";
+      scope = "parcel";
+      descriptorRange = "npm:2.5.1";
+    };
+    "@parcel/watcher@npm:2.5.1" = {
+      name = "@parcel/watcher";
+      reference = "npm:2.5.1";
+      linkType = "HARD";
+      outputName = "parcel-watcher-2.5.1-018e8f2cc2";
+      outputHash = "8f35073d0c0b34a63d4c8d2213482f0ebc6a25de7b2cdd415d19cb929964a793cb285b68d1d50bfb732b070b3c82a2fdb4eb9c250eab709a1cd9d63345455a82";
+      shouldBeUnplugged = true;
+      flatName = "watcher";
+      languageName = "node";
+      scope = "parcel";
+      descriptorRange = "npm:^2.5.1";
+      checksum = "10c0/8f35073d0c0b34a63d4c8d2213482f0ebc6a25de7b2cdd415d19cb929964a793cb285b68d1d50bfb732b070b3c82a2fdb4eb9c250eab709a1cd9d63345455a82";
+      dependencies = {
+        "@parcel/watcher-android-arm64" = packages."@parcel/watcher-android-arm64@npm:2.5.1";
+        "@parcel/watcher-darwin-arm64" = packages."@parcel/watcher-darwin-arm64@npm:2.5.1";
+        "@parcel/watcher-darwin-x64" = packages."@parcel/watcher-darwin-x64@npm:2.5.1";
+        "@parcel/watcher-freebsd-x64" = packages."@parcel/watcher-freebsd-x64@npm:2.5.1";
+        "@parcel/watcher-linux-arm-glibc" = packages."@parcel/watcher-linux-arm-glibc@npm:2.5.1";
+        "@parcel/watcher-linux-arm-musl" = packages."@parcel/watcher-linux-arm-musl@npm:2.5.1";
+        "@parcel/watcher-linux-arm64-glibc" = packages."@parcel/watcher-linux-arm64-glibc@npm:2.5.1";
+        "@parcel/watcher-linux-arm64-musl" = packages."@parcel/watcher-linux-arm64-musl@npm:2.5.1";
+        "@parcel/watcher-linux-x64-glibc" = packages."@parcel/watcher-linux-x64-glibc@npm:2.5.1";
+        "@parcel/watcher-linux-x64-musl" = packages."@parcel/watcher-linux-x64-musl@npm:2.5.1";
+        "@parcel/watcher-win32-arm64" = packages."@parcel/watcher-win32-arm64@npm:2.5.1";
+        "@parcel/watcher-win32-ia32" = packages."@parcel/watcher-win32-ia32@npm:2.5.1";
+        "@parcel/watcher-win32-x64" = packages."@parcel/watcher-win32-x64@npm:2.5.1";
+        "detect-libc" = packages."detect-libc@npm:1.0.3";
+        "is-glob" = packages."is-glob@npm:4.0.3";
+        "micromatch" = packages."micromatch@npm:4.0.8";
+        "node-addon-api" = packages."node-addon-api@npm:7.1.1";
+        "node-gyp" = packages."node-gyp@npm:11.2.0";
+      };
+    };
     "@pkgjs/parseargs@npm:0.11.0" = {
       name = "@pkgjs/parseargs";
       reference = "npm:0.11.0";
@@ -408,6 +804,33 @@ let
       scope = "pkgjs";
       descriptorRange = "npm:^0.11.0";
       checksum = "10c0/5bd7576bb1b38a47a7fc7b51ac9f38748e772beebc56200450c4a817d712232b8f1d3ef70532c80840243c657d491cf6a6be1e3a214cff907645819fdc34aadd";
+    };
+    "@standard-schema/spec@npm:1.0.0" = {
+      name = "@standard-schema/spec";
+      reference = "npm:1.0.0";
+      linkType = "HARD";
+      outputName = "standard-schema-spec-1.0.0-e86c6647f1";
+      outputHash = "a1ab9a8bdc09b5b47aa8365d0e0ec40cc2df6437be02853696a0e377321653b0d3ac6f079a8c67d5ddbe9821025584b1fb71d9cc041a6666a96f1fadf2ece15f";
+      flatName = "spec";
+      languageName = "node";
+      scope = "standard-schema";
+      descriptorRange = "npm:^1.0.0";
+      checksum = "10c0/a1ab9a8bdc09b5b47aa8365d0e0ec40cc2df6437be02853696a0e377321653b0d3ac6f079a8c67d5ddbe9821025584b1fb71d9cc041a6666a96f1fadf2ece15f";
+    };
+    "@types/node@npm:24.0.7" = {
+      name = "@types/node";
+      reference = "npm:24.0.7";
+      linkType = "HARD";
+      outputName = "types-node-24.0.7-7f7ebb1142";
+      outputHash = "be3849816dafc54ec79e6be6dafcf60bdb6466beaf0081b941142d260e2b2864855210dfe5b4395c59b276468528695aefcf4f060ac95cc433b2968e80a311f9";
+      flatName = "node";
+      languageName = "node";
+      scope = "types";
+      descriptorRange = "npm:24.0.7";
+      checksum = "10c0/be3849816dafc54ec79e6be6dafcf60bdb6466beaf0081b941142d260e2b2864855210dfe5b4395c59b276468528695aefcf4f060ac95cc433b2968e80a311f9";
+      dependencies = {
+        "undici-types" = packages."undici-types@npm:7.8.0";
+      };
     };
     "abbrev@npm:3.0.1" = {
       name = "abbrev";
@@ -509,6 +932,21 @@ let
       checksum = "10c0/6d117a4c793488af86b83172deb6af143e94c17bc53b0b3cec259733923b4ca84679d506ac261f4ba3c7ed37c46018e2ff442f9ce453af8643ecd64f4a54e6cf";
       dependencies = {
         "balanced-match" = packages."balanced-match@npm:1.0.2";
+      };
+    };
+    "braces@npm:3.0.3" = {
+      name = "braces";
+      reference = "npm:3.0.3";
+      linkType = "HARD";
+      outputName = "braces-3.0.3-582c14023c";
+      outputHash = "7c6dfd30c338d2997ba77500539227b9d1f85e388a5f43220865201e407e076783d0881f2d297b9f80951b4c957fcf0b51c1d2d24227631643c3f7c284b0aa04";
+      flatName = "braces";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^3.0.3";
+      checksum = "10c0/7c6dfd30c338d2997ba77500539227b9d1f85e388a5f43220865201e407e076783d0881f2d297b9f80951b4c957fcf0b51c1d2d24227631643c3f7c284b0aa04";
+      dependencies = {
+        "fill-range" = packages."fill-range@npm:7.1.1";
       };
     };
     "cacache@npm:19.0.1" = {
@@ -620,6 +1058,33 @@ let
         "ms" = packages."ms@npm:2.1.3";
       };
     };
+    "detect-libc@npm:1.0.3" = {
+      name = "detect-libc";
+      reference = "npm:1.0.3";
+      linkType = "HARD";
+      outputName = "detect-libc-1.0.3-c30ac344d4";
+      outputHash = "4da0deae9f69e13bc37a0902d78bf7169480004b1fed3c19722d56cff578d16f0e11633b7fbf5fb6249181236c72e90024cbd68f0b9558ae06e281f47326d50d";
+      flatName = "detect-libc";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^1.0.3";
+      checksum = "10c0/4da0deae9f69e13bc37a0902d78bf7169480004b1fed3c19722d56cff578d16f0e11633b7fbf5fb6249181236c72e90024cbd68f0b9558ae06e281f47326d50d";
+      bin = {
+        "detect-libc" = "./bin/detect-libc.js";
+      };
+    };
+    "detect-libc@npm:2.0.4" = {
+      name = "detect-libc";
+      reference = "npm:2.0.4";
+      linkType = "HARD";
+      outputName = "detect-libc-2.0.4-e8a2aba8b6";
+      outputHash = "c15541f836eba4b1f521e4eecc28eefefdbc10a94d3b8cb4c507689f332cc111babb95deda66f2de050b22122113189986d5190be97d51b5a2b23b938415e67c";
+      flatName = "detect-libc";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^2.0.1";
+      checksum = "10c0/c15541f836eba4b1f521e4eecc28eefefdbc10a94d3b8cb4c507689f332cc111babb95deda66f2de050b22122113189986d5190be97d51b5a2b23b938415e67c";
+    };
     "eastasianwidth@npm:0.2.0" = {
       name = "eastasianwidth";
       reference = "npm:0.2.0";
@@ -631,6 +1096,22 @@ let
       scope = null;
       descriptorRange = "npm:^0.2.0";
       checksum = "10c0/26f364ebcdb6395f95124fda411f63137a4bfb5d3a06453f7f23dfe52502905bd84e0488172e0f9ec295fdc45f05c23d5d91baf16bd26f0fe9acd777a188dc39";
+    };
+    "effect@npm:3.16.10" = {
+      name = "effect";
+      reference = "npm:3.16.10";
+      linkType = "HARD";
+      outputName = "effect-3.16.10-e9fa3335c4";
+      outputHash = "d5ddbdaba85c661f6ea900a672bf53f2a0c993546b59510271895d820e93c5e832781b14a5f902ca2cd8581372e572552c863cdc1d61b2dd566d6decd1d74f84";
+      flatName = "effect";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:3.16.10";
+      checksum = "10c0/d5ddbdaba85c661f6ea900a672bf53f2a0c993546b59510271895d820e93c5e832781b14a5f902ca2cd8581372e572552c863cdc1d61b2dd566d6decd1d74f84";
+      dependencies = {
+        "@standard-schema/spec" = packages."@standard-schema/spec@npm:1.0.0";
+        "fast-check" = packages."fast-check@npm:3.23.2";
+      };
     };
     "emoji-regex@npm:8.0.0" = {
       name = "emoji-regex";
@@ -750,6 +1231,21 @@ let
       descriptorRange = "npm:^3.1.1";
       checksum = "10c0/d9d3e1eafa21b78464297df91f1776f7fbaa3d5e3f7f0995648ca5b89c069d17055033817348d9f4a43d1c20b0eab84f75af6991751e839df53e4dfd6f22e844";
     };
+    "fast-check@npm:3.23.2" = {
+      name = "fast-check";
+      reference = "npm:3.23.2";
+      linkType = "HARD";
+      outputName = "fast-check-3.23.2-63dd857472";
+      outputHash = "16fcff3c80321ee765e23c3aebd0f6427f175c9c6c1753104ec658970162365dc2d56bda046d815e8f2e90634c07ba7d6f0bcfd327fbd576d98c56a18a9765ed";
+      flatName = "fast-check";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^3.23.1";
+      checksum = "10c0/16fcff3c80321ee765e23c3aebd0f6427f175c9c6c1753104ec658970162365dc2d56bda046d815e8f2e90634c07ba7d6f0bcfd327fbd576d98c56a18a9765ed";
+      dependencies = {
+        "pure-rand" = packages."pure-rand@npm:6.1.0";
+      };
+    };
     "fdir@npm:6.4.6" = {
       name = "fdir";
       reference = "npm:6.4.6";
@@ -773,6 +1269,33 @@ let
       dependencies = {
         "picomatch" = packages."picomatch@npm:4.0.2";
       };
+    };
+    "fill-range@npm:7.1.1" = {
+      name = "fill-range";
+      reference = "npm:7.1.1";
+      linkType = "HARD";
+      outputName = "fill-range-7.1.1-bf491486db";
+      outputHash = "b75b691bbe065472f38824f694c2f7449d7f5004aa950426a2c28f0306c60db9b880c0b0e4ed819997ffb882d1da02cfcfc819bddc94d71627f5269682edf018";
+      flatName = "fill-range";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^7.1.1";
+      checksum = "10c0/b75b691bbe065472f38824f694c2f7449d7f5004aa950426a2c28f0306c60db9b880c0b0e4ed819997ffb882d1da02cfcfc819bddc94d71627f5269682edf018";
+      dependencies = {
+        "to-regex-range" = packages."to-regex-range@npm:5.0.1";
+      };
+    };
+    "find-my-way-ts@npm:0.1.5" = {
+      name = "find-my-way-ts";
+      reference = "npm:0.1.5";
+      linkType = "HARD";
+      outputName = "find-my-way-ts-0.1.5-3ba951e576";
+      outputHash = "703797b8466e1fbf437f0a6f7e100e02ca5922c0d7afb0548b5e77fa9c7b4e4a5bed5d2589e27cc037a516b144e3ba334acce5369387a79975ffaf61b2900398";
+      flatName = "find-my-way-ts";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^0.1.5";
+      checksum = "10c0/703797b8466e1fbf437f0a6f7e100e02ca5922c0d7afb0548b5e77fa9c7b4e4a5bed5d2589e27cc037a516b144e3ba334acce5369387a79975ffaf61b2900398";
     };
     "foreground-child@npm:3.3.1" = {
       name = "foreground-child";
@@ -901,7 +1424,13 @@ let
       bin = {
         "hercules-autoscaler" = "src/index.js";
       };
+      dependencies = {
+        "@effect/platform-node" = packages."@effect/platform-node@virtual:9fdf1c0276a5063a0246208473136940d2d3e1cf0b872c8342473e9009a9e0ed662593c069f01f56610c6b2c2b0d36482a42d2b93dc5c5ded6d0afff13e612db#npm:0.88.3";
+        "@effect/platform" = packages."@effect/platform@virtual:9fdf1c0276a5063a0246208473136940d2d3e1cf0b872c8342473e9009a9e0ed662593c069f01f56610c6b2c2b0d36482a42d2b93dc5c5ded6d0afff13e612db#npm:0.87.1";
+        "effect" = packages."effect@npm:3.16.10";
+      };
       devDependencies = {
+        "@types/node" = packages."@types/node@npm:24.0.7";
         "tslib" = packages."tslib@npm:2.8.1";
         "tsx" = packages."tsx@npm:4.20.3";
         "typescript" = packages."typescript@patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5";
@@ -994,6 +1523,18 @@ let
         "sprintf-js" = packages."sprintf-js@npm:1.1.3";
       };
     };
+    "is-extglob@npm:2.1.1" = {
+      name = "is-extglob";
+      reference = "npm:2.1.1";
+      linkType = "HARD";
+      outputName = "is-extglob-2.1.1-0870ea68b5";
+      outputHash = "5487da35691fbc339700bbb2730430b07777a3c21b9ebaecb3072512dfd7b4ba78ac2381a87e8d78d20ea08affb3f1971b4af629173a6bf435ff8a4c47747912";
+      flatName = "is-extglob";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^2.1.1";
+      checksum = "10c0/5487da35691fbc339700bbb2730430b07777a3c21b9ebaecb3072512dfd7b4ba78ac2381a87e8d78d20ea08affb3f1971b4af629173a6bf435ff8a4c47747912";
+    };
     "is-fullwidth-code-point@npm:3.0.0" = {
       name = "is-fullwidth-code-point";
       reference = "npm:3.0.0";
@@ -1005,6 +1546,33 @@ let
       scope = null;
       descriptorRange = "npm:^3.0.0";
       checksum = "10c0/bb11d825e049f38e04c06373a8d72782eee0205bda9d908cc550ccb3c59b99d750ff9537982e01733c1c94a58e35400661f57042158ff5e8f3e90cf936daf0fc";
+    };
+    "is-glob@npm:4.0.3" = {
+      name = "is-glob";
+      reference = "npm:4.0.3";
+      linkType = "HARD";
+      outputName = "is-glob-4.0.3-cb87bf1bdb";
+      outputHash = "17fb4014e22be3bbecea9b2e3a76e9e34ff645466be702f1693e8f1ee1adac84710d0be0bd9f967d6354036fd51ab7c2741d954d6e91dae6bb69714de92c197a";
+      flatName = "is-glob";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^4.0.3";
+      checksum = "10c0/17fb4014e22be3bbecea9b2e3a76e9e34ff645466be702f1693e8f1ee1adac84710d0be0bd9f967d6354036fd51ab7c2741d954d6e91dae6bb69714de92c197a";
+      dependencies = {
+        "is-extglob" = packages."is-extglob@npm:2.1.1";
+      };
+    };
+    "is-number@npm:7.0.0" = {
+      name = "is-number";
+      reference = "npm:7.0.0";
+      linkType = "HARD";
+      outputName = "is-number-7.0.0-060086935c";
+      outputHash = "b4686d0d3053146095ccd45346461bc8e53b80aeb7671cc52a4de02dbbf7dc0d1d2a986e2fe4ae206984b4d34ef37e8b795ebc4f4295c978373e6575e295d811";
+      flatName = "is-number";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^7.0.0";
+      checksum = "10c0/b4686d0d3053146095ccd45346461bc8e53b80aeb7671cc52a4de02dbbf7dc0d1d2a986e2fe4ae206984b4d34ef37e8b795ebc4f4295c978373e6575e295d811";
     };
     "isexe@npm:2.0.0" = {
       name = "isexe";
@@ -1093,6 +1661,37 @@ let
         "proc-log" = packages."proc-log@npm:5.0.0";
         "promise-retry" = packages."promise-retry@npm:2.0.1";
         "ssri" = packages."ssri@npm:12.0.0";
+      };
+    };
+    "micromatch@npm:4.0.8" = {
+      name = "micromatch";
+      reference = "npm:4.0.8";
+      linkType = "HARD";
+      outputName = "micromatch-4.0.8-c9570e4aca";
+      outputHash = "166fa6eb926b9553f32ef81f5f531d27b4ce7da60e5baf8c021d043b27a388fb95e46a8038d5045877881e673f8134122b59624d5cecbd16eb50a42e7a6b5ca8";
+      flatName = "micromatch";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^4.0.5";
+      checksum = "10c0/166fa6eb926b9553f32ef81f5f531d27b4ce7da60e5baf8c021d043b27a388fb95e46a8038d5045877881e673f8134122b59624d5cecbd16eb50a42e7a6b5ca8";
+      dependencies = {
+        "braces" = packages."braces@npm:3.0.3";
+        "picomatch" = packages."picomatch@npm:2.3.1";
+      };
+    };
+    "mime@npm:3.0.0" = {
+      name = "mime";
+      reference = "npm:3.0.0";
+      linkType = "HARD";
+      outputName = "mime-3.0.0-8d911e4c06";
+      outputHash = "402e792a8df1b2cc41cb77f0dcc46472b7944b7ec29cb5bbcd398624b6b97096728f1239766d3fdeb20551dd8d94738344c195a6ea10c4f906eb0356323b0531";
+      flatName = "mime";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^3.0.0";
+      checksum = "10c0/402e792a8df1b2cc41cb77f0dcc46472b7944b7ec29cb5bbcd398624b6b97096728f1239766d3fdeb20551dd8d94738344c195a6ea10c4f906eb0356323b0531";
+      bin = {
+        "mime" = "cli.js";
       };
     };
     "minimatch@npm:9.0.5" = {
@@ -1257,6 +1856,59 @@ let
       descriptorRange = "npm:^2.1.3";
       checksum = "10c0/d924b57e7312b3b63ad21fc5b3dc0af5e78d61a1fc7cfb5457edaf26326bf62be5307cc87ffb6862ef1c2b33b0233cdb5d4f01c4c958cc0d660948b65a287a48";
     };
+    "msgpackr-extract@npm:3.0.3" = {
+      name = "msgpackr-extract";
+      reference = "npm:3.0.3";
+      linkType = "HARD";
+      outputName = "msgpackr-extract-3.0.3-3594f14366";
+      outputHash = "e504fd8bf86a29d7527c83776530ee6dc92dcb0273bb3679fd4a85173efead7f0ee32fb82c8410a13c33ef32828c45f81118ffc0fbed5d6842e72299894623b4";
+      shouldBeUnplugged = true;
+      flatName = "msgpackr-extract";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^3.0.2";
+      checksum = "10c0/e504fd8bf86a29d7527c83776530ee6dc92dcb0273bb3679fd4a85173efead7f0ee32fb82c8410a13c33ef32828c45f81118ffc0fbed5d6842e72299894623b4";
+      bin = {
+        "download-msgpackr-prebuilds" = "bin/download-prebuilds.js";
+      };
+      dependencies = {
+        "@msgpackr-extract/msgpackr-extract-darwin-arm64" = packages."@msgpackr-extract/msgpackr-extract-darwin-arm64@npm:3.0.3";
+        "@msgpackr-extract/msgpackr-extract-darwin-x64" = packages."@msgpackr-extract/msgpackr-extract-darwin-x64@npm:3.0.3";
+        "@msgpackr-extract/msgpackr-extract-linux-arm64" = packages."@msgpackr-extract/msgpackr-extract-linux-arm64@npm:3.0.3";
+        "@msgpackr-extract/msgpackr-extract-linux-arm" = packages."@msgpackr-extract/msgpackr-extract-linux-arm@npm:3.0.3";
+        "@msgpackr-extract/msgpackr-extract-linux-x64" = packages."@msgpackr-extract/msgpackr-extract-linux-x64@npm:3.0.3";
+        "@msgpackr-extract/msgpackr-extract-win32-x64" = packages."@msgpackr-extract/msgpackr-extract-win32-x64@npm:3.0.3";
+        "node-gyp-build-optional-packages" = packages."node-gyp-build-optional-packages@npm:5.2.2";
+        "node-gyp" = packages."node-gyp@npm:11.2.0";
+      };
+    };
+    "msgpackr@npm:1.11.4" = {
+      name = "msgpackr";
+      reference = "npm:1.11.4";
+      linkType = "HARD";
+      outputName = "msgpackr-1.11.4-b07ff0e2c8";
+      outputHash = "171f6e15b628e91969cbb715c076e218886dc505fdac9ce31aa9e8641877cb5cf52d89fe0ca2930520711b1bbc9f792e10d0a9fc08806ad5d543c50abfab322c";
+      flatName = "msgpackr";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^1.11.4";
+      checksum = "10c0/171f6e15b628e91969cbb715c076e218886dc505fdac9ce31aa9e8641877cb5cf52d89fe0ca2930520711b1bbc9f792e10d0a9fc08806ad5d543c50abfab322c";
+      dependencies = {
+        "msgpackr-extract" = packages."msgpackr-extract@npm:3.0.3";
+      };
+    };
+    "multipasta@npm:0.2.5" = {
+      name = "multipasta";
+      reference = "npm:0.2.5";
+      linkType = "HARD";
+      outputName = "multipasta-0.2.5-74ff8a6cbe";
+      outputHash = "f0790b1bdfc6b84ae6139982ead353957b668fe54fec8a4d93c19e9d051b02c837c93fbdff10b26bff2dbfcf7792c6435c27786c14ad82a0fb33b939c1bf96c6";
+      flatName = "multipasta";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^0.2.5";
+      checksum = "10c0/f0790b1bdfc6b84ae6139982ead353957b668fe54fec8a4d93c19e9d051b02c837c93fbdff10b26bff2dbfcf7792c6435c27786c14ad82a0fb33b939c1bf96c6";
+    };
     "negotiator@npm:1.0.0" = {
       name = "negotiator";
       reference = "npm:1.0.0";
@@ -1268,6 +1920,42 @@ let
       scope = null;
       descriptorRange = "npm:^1.0.0";
       checksum = "10c0/4c559dd52669ea48e1914f9d634227c561221dd54734070791f999c52ed0ff36e437b2e07d5c1f6e32909fc625fe46491c16e4a8f0572567d4dd15c3a4fda04b";
+    };
+    "node-addon-api@npm:7.1.1" = {
+      name = "node-addon-api";
+      reference = "npm:7.1.1";
+      linkType = "HARD";
+      outputName = "node-addon-api-7.1.1-bfb302df19";
+      outputHash = "fb32a206276d608037fa1bcd7e9921e177fe992fc610d098aa3128baca3c0050fc1e014fa007e9b3874cf865ddb4f5bd9f43ccb7cbbbe4efaff6a83e920b17e9";
+      shouldBeUnplugged = true;
+      flatName = "node-addon-api";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^7.0.0";
+      checksum = "10c0/fb32a206276d608037fa1bcd7e9921e177fe992fc610d098aa3128baca3c0050fc1e014fa007e9b3874cf865ddb4f5bd9f43ccb7cbbbe4efaff6a83e920b17e9";
+      dependencies = {
+        "node-gyp" = packages."node-gyp@npm:11.2.0";
+      };
+    };
+    "node-gyp-build-optional-packages@npm:5.2.2" = {
+      name = "node-gyp-build-optional-packages";
+      reference = "npm:5.2.2";
+      linkType = "HARD";
+      outputName = "node-gyp-build-optional-packages-5.2.2-2994e6ac33";
+      outputHash = "c81128c6f91873381be178c5eddcbdf66a148a6a89a427ce2bcd457593ce69baf2a8662b6d22cac092d24aa9c43c230dec4e69b3a0da604503f4777cd77e282b";
+      flatName = "node-gyp-build-optional-packages";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:5.2.2";
+      checksum = "10c0/c81128c6f91873381be178c5eddcbdf66a148a6a89a427ce2bcd457593ce69baf2a8662b6d22cac092d24aa9c43c230dec4e69b3a0da604503f4777cd77e282b";
+      bin = {
+        "node-gyp-build-optional-packages" = "bin.js";
+        "node-gyp-build-optional-packages-optional" = "optional.js";
+        "node-gyp-build-optional-packages-test" = "build-test.js";
+      };
+      dependencies = {
+        "detect-libc" = packages."detect-libc@npm:2.0.4";
+      };
     };
     "node-gyp@npm:11.2.0" = {
       name = "node-gyp";
@@ -1367,6 +2055,18 @@ let
         "minipass" = packages."minipass@npm:7.1.2";
       };
     };
+    "picomatch@npm:2.3.1" = {
+      name = "picomatch";
+      reference = "npm:2.3.1";
+      linkType = "HARD";
+      outputName = "picomatch-2.3.1-c782cfd986";
+      outputHash = "26c02b8d06f03206fc2ab8d16f19960f2ff9e81a658f831ecb656d8f17d9edc799e8364b1f4a7873e89d9702dff96204be0fa26fe4181f6843f040f819dac4be";
+      flatName = "picomatch";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^2.3.1";
+      checksum = "10c0/26c02b8d06f03206fc2ab8d16f19960f2ff9e81a658f831ecb656d8f17d9edc799e8364b1f4a7873e89d9702dff96204be0fa26fe4181f6843f040f819dac4be";
+    };
     "picomatch@npm:4.0.2" = {
       name = "picomatch";
       reference = "npm:4.0.2";
@@ -1406,6 +2106,18 @@ let
         "err-code" = packages."err-code@npm:2.0.3";
         "retry" = packages."retry@npm:0.12.0";
       };
+    };
+    "pure-rand@npm:6.1.0" = {
+      name = "pure-rand";
+      reference = "npm:6.1.0";
+      linkType = "HARD";
+      outputName = "pure-rand-6.1.0-497ea3fc37";
+      outputHash = "1abe217897bf74dcb3a0c9aba3555fe975023147b48db540aa2faf507aee91c03bf54f6aef0eb2bf59cc259a16d06b28eca37f0dc426d94f4692aeff02fb0e65";
+      flatName = "pure-rand";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^6.1.0";
+      checksum = "10c0/1abe217897bf74dcb3a0c9aba3555fe975023147b48db540aa2faf507aee91c03bf54f6aef0eb2bf59cc259a16d06b28eca37f0dc426d94f4692aeff02fb0e65";
     };
     "resolve-pkg-maps@npm:1.0.0" = {
       name = "resolve-pkg-maps";
@@ -1669,6 +2381,21 @@ let
         "picomatch" = packages."picomatch@npm:4.0.2";
       };
     };
+    "to-regex-range@npm:5.0.1" = {
+      name = "to-regex-range";
+      reference = "npm:5.0.1";
+      linkType = "HARD";
+      outputName = "to-regex-range-5.0.1-f1e8263b00";
+      outputHash = "487988b0a19c654ff3e1961b87f471702e708fa8a8dd02a298ef16da7206692e8552a0250e8b3e8759270f62e9d8314616f6da274734d3b558b1fc7b7724e892";
+      flatName = "to-regex-range";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^5.0.1";
+      checksum = "10c0/487988b0a19c654ff3e1961b87f471702e708fa8a8dd02a298ef16da7206692e8552a0250e8b3e8759270f62e9d8314616f6da274734d3b558b1fc7b7724e892";
+      dependencies = {
+        "is-number" = packages."is-number@npm:7.0.0";
+      };
+    };
     "tslib@npm:2.8.1" = {
       name = "tslib";
       reference = "npm:2.8.1";
@@ -1732,6 +2459,30 @@ let
         "tsc" = "bin/tsc";
         "tsserver" = "bin/tsserver";
       };
+    };
+    "undici-types@npm:7.8.0" = {
+      name = "undici-types";
+      reference = "npm:7.8.0";
+      linkType = "HARD";
+      outputName = "undici-types-7.8.0-86f3e2d23e";
+      outputHash = "9d9d246d1dc32f318d46116efe3cfca5a72d4f16828febc1918d94e58f6ffcf39c158aa28bf5b4fc52f410446bc7858f35151367bd7a49f21746cab6497b709b";
+      flatName = "undici-types";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:~7.8.0";
+      checksum = "10c0/9d9d246d1dc32f318d46116efe3cfca5a72d4f16828febc1918d94e58f6ffcf39c158aa28bf5b4fc52f410446bc7858f35151367bd7a49f21746cab6497b709b";
+    };
+    "undici@npm:7.11.0" = {
+      name = "undici";
+      reference = "npm:7.11.0";
+      linkType = "HARD";
+      outputName = "undici-7.11.0-28ae936507";
+      outputHash = "e5dd3cc2acae9c8333f97a78d4e91108957367fa7e69918e3a5cbd84702cb453cf7de3f8c2a33bcf808850d78ead70f3bd62900a70d969912e9fed8842bbfc11";
+      flatName = "undici";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^7.10.0";
+      checksum = "10c0/e5dd3cc2acae9c8333f97a78d4e91108957367fa7e69918e3a5cbd84702cb453cf7de3f8c2a33bcf808850d78ead70f3bd62900a70d969912e9fed8842bbfc11";
     };
     "unique-filename@npm:4.0.0" = {
       name = "unique-filename";
@@ -1832,6 +2583,29 @@ let
         "string-width" = packages."string-width@npm:5.1.2";
         "strip-ansi" = packages."strip-ansi@npm:7.1.0";
       };
+    };
+    "ws@npm:8.18.3" = {
+      name = "ws";
+      reference = "npm:8.18.3";
+      linkType = "HARD";
+      outputName = "ws-8.18.3-665d39209d";
+      outputHash = "eac918213de265ef7cb3d4ca348b891a51a520d839aa51cdb8ca93d4fa7ff9f6ccb339ccee89e4075324097f0a55157c89fa3f7147bde9d8d7e90335dc087b53";
+      flatName = "ws";
+      languageName = "node";
+      scope = null;
+      descriptorRange = "npm:^8.18.2";
+      checksum = "10c0/eac918213de265ef7cb3d4ca348b891a51a520d839aa51cdb8ca93d4fa7ff9f6ccb339ccee89e4075324097f0a55157c89fa3f7147bde9d8d7e90335dc087b53";
+      packagePeers = [
+        "@types/bufferutil"
+        "@types/utf-8-validate"
+        "bufferutil"
+        "utf-8-validate"
+      ];
+    };
+    "ws@virtual:85d9fc7390c2387fc90f37043b6e9563f4d165db63de6d3677005ae240534b8f57036762614c3306e5ff09aeaab8bcafec7a88bb4f25d593e4eb9366cf6789f2#npm:8.18.3" = {
+      name = "ws";
+      reference = "virtual:85d9fc7390c2387fc90f37043b6e9563f4d165db63de6d3677005ae240534b8f57036762614c3306e5ff09aeaab8bcafec7a88bb4f25d593e4eb9366cf6789f2#npm:8.18.3";
+      canonicalPackage = packages."ws@npm:8.18.3";
     };
     "yallist@npm:4.0.0" = {
       name = "yallist";
