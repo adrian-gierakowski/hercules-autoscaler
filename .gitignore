@@ -1,6 +1,4 @@
 .direnv
-.yarn
-
 # yarn
 .pnp.*
 **/.yarn/**
