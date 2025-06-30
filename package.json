@@ -1,0 +1,5 @@
+{
+  "name": "hercules-autoscaler",
+  "packageManager": "yarn@4.9.1",
+  "bin": "src/index.js"
+}
