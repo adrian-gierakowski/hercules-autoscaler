@@ -1,6 +1,5 @@
 {
   inputs = {
-    utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     yarnpnp2nix.url = "github:adrian-gierakowski/yarnpnp2nix";
   };
@@ -9,25 +8,25 @@
     {
       self,
       nixpkgs,
-      utils,
       yarnpnp2nix,
-    }:
-    utils.lib.eachDefaultSystem (
-      system:
-      let
-        pkgs = import nixpkgs {
-          inherit system;
-          overlays = [ yarnpnp2nix.overlays.default ];
-        };
-      in
-      {
-        devShell = pkgs.mkShell {
-          YARN_PLUGINS = pkgs.yarn-plugin-yarnpnp2nix;
+    }: let
+      forAllSystems = nixpkgs.lib.genAttrs ["x86_64-linux" "aarch64-linux"];
+
+      pkgsFor = forAllSystems (system: import nixpkgs {
+        inherit system;
+        overlays = [
+          yarnpnp2nix.overlays.default
+        ];
+      });
+    in {
+      devShells = forAllSystems (system: let pkgs = pkgsFor.${system}; in {
+        default = pkgs.mkShell {
           nativeBuildInputs = with pkgs; [
             nodejs
             yarnBerry
           ];
+          env.YARN_PLUGINS = pkgs.yarn-plugin-yarnpnp2nix;
         };
-      }
-    );
+      });
+    };
 }
