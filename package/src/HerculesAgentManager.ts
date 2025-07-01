@@ -2,9 +2,15 @@ import { Effect } from 'effect'
 
 export class HerculesAgentManager
   extends Effect.Service<HerculesAgentManager>()('HerculesAgentManager', {
-    succeed: {
-      scale: (_targetInstances: number) => Effect.void,
-      instanceCount: () => Effect.succeed(1),
-    },
+    effect: Effect.gen(function*() {
+      let currentInstanceCount = 2
+      return {
+        scale: (targetInstanceCount: number) =>
+          Effect.sync(() => {
+            currentInstanceCount = targetInstanceCount
+          }),
+        instanceCount: () => Effect.succeed(currentInstanceCount),
+      }
+    }),
   })
 {}
