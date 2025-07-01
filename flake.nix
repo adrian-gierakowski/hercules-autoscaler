@@ -62,6 +62,9 @@
                 programs.dprint = {
                   includes = lib.mkForce [
                     "**/*.ts"
+                    "**/*.mts"
+                    "**/*.mjs"
+                    "**/*.js"
                   ];
                 };
                 programs.dprint.settings = {
@@ -97,6 +100,9 @@
                   dprint = {
                     includes = lib.mkForce [
                       "*.ts"
+                      "*.mts"
+                      "*.mjs"
+                      "*.js"
                     ];
                   };
                 };
@@ -111,7 +117,7 @@
                     "*.sh"
                     "*.txt"
                     "*.yml"
-                    "*/.yarn/*"
+                    "**/.yarn/**"
                     ".envrc"
                     "LICENSE"
                     "package.json"

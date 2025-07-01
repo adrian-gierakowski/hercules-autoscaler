@@ -1,6 +1,6 @@
 import { DateTime, Duration } from 'effect'
 import assert from 'node:assert'
-import { it } from 'node:test'
+import { it } from 'vitest'
 import { calculateScore } from './lib.ts'
 import { Task } from './schemas.ts'
 
