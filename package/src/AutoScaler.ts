@@ -41,7 +41,7 @@ export const calculateTargetInstanceCount = ({
 
   return targetRunnerCount == currentInstanceCount
     ? Option.none()
-    : Option.some(targetRunnerCount)
+    : Option.some(Math.ceil(targetRunnerCount))
 }
 
 export class AutoScaler extends Effect.Service<AutoScaler>()('AutoScaler', {

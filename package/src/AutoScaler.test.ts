@@ -19,6 +19,14 @@ describe('AutoScaler.calculateTargetInstanceCount', () => {
     expect(calculateTargetInstanceCount(input)).toEqual(Option.some(6))
   })
 
+  it('rounds up target count', () => {
+    expect(calculateTargetInstanceCount({
+      ...input,
+      scaleUpFactor: 1.1,
+    }))
+      .toEqual(Option.some(4))
+  })
+
   it('does not scales if qeuedTasksCount <= scaleUpThreshold && qeuedTasksCount != 0', () => {
     expect(calculateTargetInstanceCount({
       ...input,
