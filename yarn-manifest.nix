@@ -215,7 +215,7 @@ let
       reference = "npm:0.25.5";
       linkType = "HARD";
       outputName = "esbuild-darwin-arm64-0.25.5-9d56929295";
-      outputHash = "";
+      outputHash = "a009eab62f2bd284a6f2001d5e08217059186ffc16907bbe873e1de40fe9b5ed92c0db2f4c4d0dc41545838850a430c8f2f35d7bdb9cd01a1a04293acd97afca";
       shouldBeUnplugged = true;
       installCondition = stdenv: (stdenv.isDarwin) && (stdenv.isAarch64);
       flatName = "darwin-arm64";
@@ -228,7 +228,7 @@ let
       reference = "npm:0.25.5";
       linkType = "HARD";
       outputName = "esbuild-darwin-x64-0.25.5-d10277bdc6";
-      outputHash = "";
+      outputHash = "cac8021a7a0c549263e076913346b35a5bb81f76ffbc1abfad5e7b67303f013ac0c76f111bf624ea8447b327ec86c18a60c6ff307d743a2269f5d47313f5b2de";
       shouldBeUnplugged = true;
       installCondition = stdenv: (stdenv.isDarwin) && (stdenv.isx86_64);
       flatName = "darwin-x64";
@@ -280,7 +280,7 @@ let
       reference = "npm:0.25.5";
       linkType = "HARD";
       outputName = "esbuild-linux-arm64-0.25.5-1eecdaf555";
-      outputHash = "";
+      outputHash = "ce3c8fca47cf0a92148fb288eb35a5c4a4dcf7a700730b3a48fdd63c13e17c719eb6b350378203fba773477eb5be637f47a6d52c5d4ce5bdc0075ee917156006";
       shouldBeUnplugged = true;
       installCondition = stdenv: (stdenv.isLinux) && (stdenv.isAarch64);
       flatName = "linux-arm64";
@@ -887,7 +887,7 @@ let
       reference = "npm:4.44.1";
       linkType = "HARD";
       outputName = "rollup-rollup-darwin-arm64-4.44.1-b873367390";
-      outputHash = "";
+      outputHash = "93cef94c44d1baabc5346148d59ebb5d640948b2895bbc5de6804908999857f331c388eb449f98eba98d2b239492e91211accee7eaf4b579ae3c007705d76246";
       shouldBeUnplugged = true;
       installCondition = stdenv: (stdenv.isDarwin) && (stdenv.isAarch64);
       flatName = "rollup-darwin-arm64";
@@ -900,7 +900,7 @@ let
       reference = "npm:4.44.1";
       linkType = "HARD";
       outputName = "rollup-rollup-darwin-x64-4.44.1-cd92926757";
-      outputHash = "";
+      outputHash = "d235e7f40080cc19295d45935b83a0238cb66962e7d6d4af0eb261012d80bc344fe073ec9dcc3d39092138a66e7a69c4e79cbac7c6ee49b8329b80d12d52968f";
       shouldBeUnplugged = true;
       installCondition = stdenv: (stdenv.isDarwin) && (stdenv.isx86_64);
       flatName = "rollup-darwin-x64";
@@ -965,7 +965,7 @@ let
       reference = "npm:4.44.1";
       linkType = "HARD";
       outputName = "rollup-rollup-linux-arm64-gnu-4.44.1-2e3f8acd4e";
-      outputHash = "";
+      outputHash = "a5382c59bf531afd774b7de82d1600bfb5915a0708ad6c7099ffd1af657b813a525de18902178120b247c95e21487f0c96a8eecc8d9ae9163da12ecb4a5ed3d3";
       shouldBeUnplugged = true;
       installCondition = stdenv: (stdenv.isLinux) && (stdenv.isAarch64);
       flatName = "rollup-linux-arm64-gnu";
