@@ -1,5 +1,5 @@
 import { Array, DateTime, Duration } from 'effect'
-import type { Task } from './schemas.ts'
+import type { Task } from './schemas.js'
 
 type Options = {
   currentTime: DateTime.DateTime
@@ -7,7 +7,7 @@ type Options = {
   maxAge: Duration.Duration
 }
 
-export const calculateScore = (
+export const countQueuedTasks = (
   { currentTime, maxAge, minAge }: Options,
   tasks: ReadonlyArray<Task>,
 ) =>

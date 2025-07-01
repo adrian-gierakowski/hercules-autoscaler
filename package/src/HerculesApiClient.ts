@@ -10,7 +10,7 @@ import {
 } from '@effect/platform'
 import { BadRequest } from '@effect/platform/HttpApiError'
 import { Config, Effect, pipe, Redacted, Schema } from 'effect'
-import { TasksApiResponse } from './schemas.ts'
+import { TasksApiResponse } from './schemas.js'
 
 const Qeury = Schema.Struct({
   state: pipe(

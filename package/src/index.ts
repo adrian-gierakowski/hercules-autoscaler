@@ -1,12 +1,17 @@
 import { runMain } from '@effect/platform-node/NodeRuntime'
-import { Config, DateTime, Effect, Layer } from 'effect'
-import { HerculesAgentManager } from './HerculesAgentManager.ts'
-import { HerculesClient } from './HerculesApiClient.ts'
-import { calculateScore } from './lib.ts'
+import { Config, DateTime, Effect, Layer, Number } from 'effect'
+import { HerculesAgentManager } from './HerculesAgentManager.js'
+import { HerculesClient } from './HerculesApiClient.js'
+import { countQueuedTasks } from './lib.js'
 
 const AppConfig = Config.unwrap({
   maxAge: Config.duration('MAX_AGE'),
   minAge: Config.duration('MIN_AGE'),
+  maxRunnersCount: Config.integer('MAX_RUNNERS_COUNT'),
+  minRunnersCount: Config.integer('MIN_RUNNERS_COUNT'),
+  checkInterval: Config.duration('CHECK_INTERVAL'),
+  scaleUpThreshold: Config.integer('SCALE_UP_THRESHOLD'),
+  scaleUpFactor: Config.number('SCALE_UP_FACTOR'),
 })
 
 const program = Effect.gen(function*() {
@@ -18,7 +23,7 @@ const program = Effect.gen(function*() {
     payload: { limit: 20 },
   })
 
-  const score = calculateScore(
+  const score = countQueuedTasks(
     {
       ...appConfig,
       currentTime: yield* DateTime.now,
@@ -26,9 +31,18 @@ const program = Effect.gen(function*() {
     tasks,
   )
 
-  if (score > 100) {
+  if (score > appConfig.scaleUpThreshold) {
     const currentInstanceCount = yield* agentManager.instanceCount()
-    yield* agentManager.scale(currentInstanceCount * 2)
+    const targetRunnerCount = Number.clamp(
+      currentInstanceCount * appConfig.scaleUpFactor,
+      {
+        minimum: appConfig.minRunnersCount,
+        maximum: appConfig.maxRunnersCount,
+      },
+    )
+    yield* agentManager.scale(targetRunnerCount)
+  } else if (score === 0) {
+    yield* agentManager.scale(appConfig.minRunnersCount)
   }
 })
 
