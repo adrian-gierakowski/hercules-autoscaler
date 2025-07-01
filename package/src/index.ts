@@ -19,7 +19,8 @@ export const program = Effect.gen(function*() {
   const schedule = Schedule.spaced(appConfig.checkInterval)
 
   const run = pipe(
-    autoScaler.run(appConfig),
+    Effect.log('starting auto-scaler run'),
+    Effect.zipRight(autoScaler.run(appConfig)),
     Effect.sandbox,
     Effect.tapError(error => Effect.log('Error during AutoScaler run:', error)),
     Effect.either,

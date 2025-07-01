@@ -64,11 +64,21 @@ export class AutoScaler extends Effect.Service<AutoScaler>()('AutoScaler', {
         )
 
         const currentInstanceCount = yield* agentManager.instanceCount()
+
+        const decisionInput = {
+          ...options,
+          qeuedTasksCount,
+          currentInstanceCount,
+        }
+        yield* Effect.log('decision input', decisionInput)
+
         const targetRunnerCount = calculateTargetInstanceCount({
           ...options,
           qeuedTasksCount,
           currentInstanceCount,
         })
+
+        yield* Effect.log('decision result', targetRunnerCount)
 
         if (Option.isSome(targetRunnerCount)) {
           yield* agentManager.scale(targetRunnerCount.value)
