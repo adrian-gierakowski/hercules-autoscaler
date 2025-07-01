@@ -2,16 +2,26 @@ import { Match, Schema } from 'effect'
 
 export class Task extends Schema.Class<Task>('Task')({
   creationTime: Schema.DateTimeUtc,
+  system: Schema.String,
 }) {}
 
-const TaskApiEncoded = Schema.Struct({
-  creationTime: Schema.String,
-})
+const TaskApiEncoded = Schema
+  .Struct({
+    ...Task.fields,
+    creationTime: Schema.String,
+  })
+  .annotations({ identifier: 'TaskApiEncoded' })
 
 const TaskApiResponse = Schema.Union(
-  Schema.Struct({ Build: TaskApiEncoded }),
-  Schema.Struct({ Effect: TaskApiEncoded }),
-  Schema.Struct({ Evaluation: TaskApiEncoded }),
+  Schema.Struct({ Build: TaskApiEncoded }).annotations({
+    identifier: 'Build',
+  }),
+  Schema.Struct({ Effect: TaskApiEncoded }).annotations({
+    identifier: 'Effect',
+  }),
+  Schema.Struct({ Evaluation: TaskApiEncoded }).annotations({
+    identifier: 'Evaluation',
+  }),
 )
 
 const TaskFromApiResponse = Schema.transform(

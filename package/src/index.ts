@@ -10,6 +10,7 @@ const AppConfig = Config.unwrap({
   checkInterval: Config.duration('CHECK_INTERVAL'),
   scaleUpThreshold: Config.integer('SCALE_UP_THRESHOLD'),
   scaleUpFactor: Config.number('SCALE_UP_FACTOR'),
+  agentSystem: Config.string('AGENT_SYSTEM'),
 })
 
 export const program = Effect.gen(function*() {

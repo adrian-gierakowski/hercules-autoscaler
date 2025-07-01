@@ -1,4 +1,4 @@
-import { DateTime, Duration, Effect, Number, Option } from 'effect'
+import { Array, DateTime, Duration, Effect, Number, Option } from 'effect'
 import { HerculesAgentManager } from './HerculesAgentManager.js'
 import { HerculesClient } from './HerculesApiClient.js'
 import { countQueuedTasks } from './lib.js'
@@ -17,6 +17,7 @@ export type AutoScalerDecisionInput = AutoScalerDecisionConfig & {
 export type AutoScalerRunConfig = AutoScalerDecisionConfig & {
   maxAge: Duration.Duration
   minAge: Duration.Duration
+  agentSystem: string
 }
 
 export const calculateTargetInstanceCount = ({
@@ -60,7 +61,7 @@ export class AutoScaler extends Effect.Service<AutoScaler>()('AutoScaler', {
             ...options,
             currentTime: yield* DateTime.now,
           },
-          tasks,
+          Array.filter(tasks, task => task.system === options.agentSystem),
         )
 
         const currentInstanceCount = yield* agentManager.instanceCount()

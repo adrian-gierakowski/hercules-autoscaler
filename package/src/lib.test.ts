@@ -12,15 +12,24 @@ it('countQueuedTasks', () => {
     minAge,
     maxAge,
   }
+  const system = 'x86_64-linux'
 
   expect(
-    countQueuedTasks(options, [Task.make({ creationTime: currentTime })]),
+    countQueuedTasks(options, [
+      Task.make({
+        creationTime: currentTime,
+        system,
+      }),
+    ]),
   )
     .toBe(0)
 
   expect(
     countQueuedTasks(options, [
-      Task.make({ creationTime: DateTime.add(currentTime, { minutes: 10 }) }),
+      Task.make({
+        creationTime: DateTime.add(currentTime, { minutes: 10 }),
+        system,
+      }),
     ]),
   )
     .toBe(1)
@@ -29,6 +38,7 @@ it('countQueuedTasks', () => {
     countQueuedTasks(options, [
       Task.make({
         creationTime: DateTime.add(currentTime, { days: 1, seconds: 1 }),
+        system,
       }),
     ]),
   )
